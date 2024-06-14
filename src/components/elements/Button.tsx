@@ -2,10 +2,10 @@ import { ButtonHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
 type Size = "extra-large" | "extra-small" | "large" | "medium" | "small";
-type Variant = "primary";
+type Variant = "primary" | "secondary";
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   size?: Size;
-  variant: Variant;
+  variant?: Variant;
 };
 
 const sizes: Record<Size, string> = {
@@ -18,9 +18,16 @@ const sizes: Record<Size, string> = {
 const variants: Record<Variant, string> = {
   primary:
     "rounded bg-indigo-600 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
+  secondary:
+    "rounded bg-white font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50",
 };
 
-function Button({ className, size = "medium", variant, ...rest }: Props) {
+function Button({
+  className,
+  size = "medium",
+  variant = "secondary",
+  ...rest
+}: Props) {
   return (
     <button
       className={twMerge(sizes[size], variants[variant], className)}
