@@ -62,6 +62,32 @@ function ButtonsPage() {
           </div>
         </div>
       </div>
+
+      <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Soft buttons
+        </h2>
+
+        <div className="bg-white px-4 py-8">
+          <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
+            <Button size="extra-small" variant="soft">
+              Button text
+            </Button>
+            <Button size="small" variant="soft">
+              Button text
+            </Button>
+            <Button size="medium" variant="soft">
+              Button text
+            </Button>
+            <Button size="large" variant="soft">
+              Button text
+            </Button>
+            <Button size="extra-large" variant="soft">
+              Button text
+            </Button>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
