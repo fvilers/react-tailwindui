@@ -1,9 +1,7 @@
+import HomePage from "./home/HomePage";
+
 function App() {
-  return (
-    <div>
-      <h1>React Tailwind UI</h1>
-    </div>
-  );
+  return <HomePage />;
 }
 
 export default App;
