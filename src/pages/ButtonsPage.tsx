@@ -88,6 +88,84 @@ function ButtonsPage() {
           </div>
         </div>
       </div>
+
+      <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Rounded primary buttons
+        </h2>
+
+        <div className="bg-white px-4 py-8">
+          <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
+            <Button rounded size="extra-small" variant="primary">
+              Button text
+            </Button>
+            <Button rounded size="small" variant="primary">
+              Button text
+            </Button>
+            <Button rounded size="medium" variant="primary">
+              Button text
+            </Button>
+            <Button rounded size="large" variant="primary">
+              Button text
+            </Button>
+            <Button rounded size="extra-large" variant="primary">
+              Button text
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Rounded secondary buttons
+        </h2>
+
+        <div className="bg-white px-4 py-8">
+          <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
+            <Button rounded size="extra-small" variant="secondary">
+              Button text
+            </Button>
+            <Button rounded size="small" variant="secondary">
+              Button text
+            </Button>
+            <Button rounded size="medium" variant="secondary">
+              Button text
+            </Button>
+            <Button rounded size="large" variant="secondary">
+              Button text
+            </Button>
+            <Button rounded size="extra-large" variant="secondary">
+              Button text
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Rounded soft buttons
+        </h2>
+
+        <div className="bg-white px-4 py-8">
+          <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
+            <Button rounded size="extra-small" variant="soft">
+              Button text
+            </Button>
+            <Button rounded size="small" variant="soft">
+              Button text
+            </Button>
+            <Button rounded size="medium" variant="soft">
+              Button text
+            </Button>
+            <Button rounded size="large" variant="soft">
+              Button text
+            </Button>
+            <Button rounded size="extra-large" variant="soft">
+              Button text
+            </Button>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
