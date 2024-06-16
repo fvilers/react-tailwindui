@@ -29,6 +29,9 @@ export default [
             description,
             module: "index.js",
             name,
+            publishConfig: {
+              access: "public",
+            },
             type,
             types: "index.d.ts",
             version,
