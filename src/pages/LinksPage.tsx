@@ -1,3 +1,4 @@
+import { Link as RouterLink } from "react-router-dom";
 import Link from "../components/elements/Link";
 
 function LinksPage() {
@@ -12,12 +13,31 @@ function LinksPage() {
       </div>
 
       <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Links as React Router links
+        </h2>
         <div className="bg-white px-4 py-8">
           <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
-            <Link to="/" variant="primary">
+            <Link as={RouterLink} to="/" variant="primary">
               Primary link
             </Link>
-            <Link to="/" variant="secondary">
+            <Link as={RouterLink} to="/" variant="secondary">
+              Secondary link
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Links as HTML anchor links
+        </h2>
+        <div className="bg-white px-4 py-8">
+          <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
+            <Link as="a" href="/" variant="primary">
+              Primary link
+            </Link>
+            <Link as="a" href="/" variant="secondary">
               Secondary link
             </Link>
           </div>

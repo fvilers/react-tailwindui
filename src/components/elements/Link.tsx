@@ -1,17 +1,12 @@
 import { VariantProps, cva } from "class-variance-authority";
-import { AnchorHTMLAttributes } from "react";
-import { LinkProps, Link as RouterLink } from "react-router-dom";
+import { ComponentPropsWithoutRef, ElementType } from "react";
 import { twMerge } from "tailwind-merge";
 
-const styles = cva("button", {
+const styles = cva("link", {
   defaultVariants: {
     variant: "secondary",
   },
   variants: {
-    button: {
-      false: "",
-      true: "",
-    },
     variant: {
       primary: "font-semibold text-indigo-600 hover:text-indigo-500",
       secondary: "font-semibold text-gray-700 hover:text-indigo-600",
@@ -19,13 +14,21 @@ const styles = cva("button", {
   },
 });
 
-type Props = AnchorHTMLAttributes<HTMLAnchorElement> &
-  LinkProps &
+type Props<C extends ElementType> = {
+  as?: C;
+} & ComponentPropsWithoutRef<C> &
   VariantProps<typeof styles>;
 
-function Link({ className, variant, ...rest }: Props) {
+function Link<C extends ElementType>({
+  as,
+  className,
+  variant,
+  ...rest
+}: Props<C>) {
+  const Component = as ?? "a";
+
   return (
-    <RouterLink className={twMerge(styles({ variant }), className)} {...rest} />
+    <Component className={twMerge(styles({ variant }), className)} {...rest} />
   );
 }
 
