@@ -166,6 +166,26 @@ function ButtonsPage() {
           </div>
         </div>
       </div>
+
+      <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Buttons as links
+        </h2>
+
+        <div className="bg-white px-4 py-8">
+          <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
+            <Button as="a" href="/" variant="primary">
+              Button text
+            </Button>
+            <Button as="a" href="/" variant="secondary">
+              Button text
+            </Button>
+            <Button as="a" href="/" variant="soft">
+              Button text
+            </Button>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

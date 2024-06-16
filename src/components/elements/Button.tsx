@@ -1,5 +1,5 @@
 import { VariantProps, cva } from "class-variance-authority";
-import { ButtonHTMLAttributes } from "react";
+import { ComponentPropsWithoutRef, ElementType } from "react";
 import { twMerge } from "tailwind-merge";
 
 const styles = cva("button", {
@@ -57,12 +57,23 @@ const styles = cva("button", {
   },
 });
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement> &
+type Props<C extends ElementType> = {
+  as?: C;
+} & ComponentPropsWithoutRef<C> &
   VariantProps<typeof styles>;
 
-function Button({ className, rounded, size, variant, ...rest }: Props) {
+function Button<C extends ElementType>({
+  as,
+  className,
+  rounded,
+  size,
+  variant,
+  ...rest
+}: Props<C>) {
+  const Component = as ?? "button";
+
   return (
-    <button
+    <Component
       className={twMerge(styles({ rounded, size, variant }), className)}
       {...rest}
     />
