@@ -9,6 +9,10 @@ const elements = [
     children: "Circular buttons",
     to: "/elements/circular-buttons",
   },
+  {
+    children: "Links",
+    to: "/elements/links",
+  },
 ];
 
 function HomePage() {
