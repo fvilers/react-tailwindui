@@ -1,5 +1,16 @@
 import { Link } from "react-router-dom";
 
+const elements = [
+  {
+    children: "Buttons",
+    to: "/elements/buttons",
+  },
+  {
+    children: "Circular buttons",
+    to: "/elements/circular-buttons",
+  },
+];
+
 function HomePage() {
   return (
     <main className="space-y-6 p-4">
@@ -21,10 +32,15 @@ function HomePage() {
         </h2>
       </div>
       <nav>
-        <ul>
-          <li>
-            <Link to="/elements/buttons">Buttons</Link>
-          </li>
+        <ul className="space-y-2">
+          {elements.map((item) => (
+            <li key={item.to}>
+              <Link
+                className="font-semibold text-gray-700 hover:text-indigo-600"
+                {...item}
+              />
+            </li>
+          ))}
         </ul>
       </nav>
     </main>
