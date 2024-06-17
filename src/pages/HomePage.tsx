@@ -15,6 +15,12 @@ const elements = [
     to: "/elements/links",
   },
 ];
+const forms = [
+  {
+    children: "Input groups",
+    to: "/forms/input-groups",
+  },
+];
 
 function HomePage() {
   return (
@@ -39,6 +45,25 @@ function HomePage() {
       <nav>
         <ul className="space-y-2">
           {elements.map((item) => (
+            <li key={item.to}>
+              <Link
+                as={RouterLink}
+                className="font-semibold text-gray-700 hover:text-indigo-600"
+                {...item}
+              />
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Forms
+        </h2>
+      </div>
+      <nav>
+        <ul className="space-y-2">
+          {forms.map((item) => (
             <li key={item.to}>
               <Link
                 as={RouterLink}
