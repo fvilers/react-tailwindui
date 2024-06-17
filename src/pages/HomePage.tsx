@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import Link from "../components/elements/Link";
 
 const elements = [
   {
@@ -40,6 +41,7 @@ function HomePage() {
           {elements.map((item) => (
             <li key={item.to}>
               <Link
+                as={RouterLink}
                 className="font-semibold text-gray-700 hover:text-indigo-600"
                 {...item}
               />
