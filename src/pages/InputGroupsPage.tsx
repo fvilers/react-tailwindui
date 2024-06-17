@@ -27,6 +27,24 @@ function InputGroupsPage() {
           </div>
         </div>
       </div>
+
+      <div>
+        <h2 className="text-xl font-bold leading-6 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">
+          Input with label and help text
+        </h2>
+        <div className="bg-white px-4 py-8">
+          <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
+            <InputGroup
+              help="We'll only use this for spam."
+              id="email"
+              label="Email"
+              name="email"
+              placeholder="you@example.com"
+              type="email"
+            />
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
