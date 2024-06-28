@@ -4,10 +4,19 @@ import { twMerge } from "tailwind-merge";
 type Props = InputHTMLAttributes<HTMLInputElement> & {
   error?: ReactNode;
   help?: ReactNode;
+  hiddenLabel?: boolean;
   label?: ReactNode;
 };
 
-function InputGroup({ className, error, help, id, label, ...rest }: Props) {
+function InputGroup({
+  className,
+  error,
+  help,
+  hiddenLabel,
+  id,
+  label,
+  ...rest
+}: Props) {
   const descriptionId = id && help ? `${id}-description` : undefined;
   const errorId = id && error ? `${id}-error` : undefined;
 
@@ -15,7 +24,11 @@ function InputGroup({ className, error, help, id, label, ...rest }: Props) {
     <div>
       {label && (
         <label
-          className="block text-sm font-medium leading-6 text-gray-900"
+          className={
+            hiddenLabel
+              ? "sr-only"
+              : "block text-sm font-medium leading-6 text-gray-900"
+          }
           htmlFor={id}
         >
           {label}
@@ -33,6 +46,7 @@ function InputGroup({ className, error, help, id, label, ...rest }: Props) {
               "pr-10 text-red-900 ring-red-300 placeholder:text-red-300 focus:ring-red-500",
             className,
           )}
+          hidden
           {...rest}
         />
 
