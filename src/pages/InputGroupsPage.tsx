@@ -18,7 +18,7 @@ function InputGroupsPage() {
         <div className="bg-white px-4 py-8">
           <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
             <InputGroup
-              id="email"
+              id="email1"
               label="Email"
               name="email"
               placeholder="you@example.com"
@@ -36,7 +36,7 @@ function InputGroupsPage() {
           <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
             <InputGroup
               help="We'll only use this for spam."
-              id="email"
+              id="email2"
               label="Email"
               name="email"
               placeholder="you@example.com"
@@ -56,7 +56,7 @@ function InputGroupsPage() {
               defaultValue="not_an_email_address"
               error="Not a valid email address."
               help="We'll only use this for spam."
-              id="email"
+              id="email3"
               label="Email"
               name="email"
               placeholder="you@example.com"
@@ -74,7 +74,7 @@ function InputGroupsPage() {
           <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
             <InputGroup
               disabled
-              id="email"
+              id="email4"
               label="Email"
               name="email"
               placeholder="you@example.com"
@@ -92,7 +92,7 @@ function InputGroupsPage() {
           <div className="mx-auto flex max-w-3xl flex-col items-center justify-start space-y-4 sm:flex-row sm:items-end sm:justify-around sm:space-y-0">
             <InputGroup
               hiddenLabel={true}
-              id="email"
+              id="email5"
               label="Email"
               name="email"
               placeholder="you@example.com"

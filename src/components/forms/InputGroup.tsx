@@ -47,6 +47,7 @@ function InputGroup({
             className,
           )}
           hidden
+          id={id}
           {...rest}
         />
 
