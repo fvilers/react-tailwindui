@@ -2,6 +2,7 @@ import { InputHTMLAttributes, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
 type Props = InputHTMLAttributes<HTMLInputElement> & {
+  cornerHint?: ReactNode;
   error?: ReactNode;
   help?: ReactNode;
   hiddenLabel?: boolean;
@@ -10,6 +11,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> & {
 
 function InputGroup({
   className,
+  cornerHint,
   error,
   help,
   hiddenLabel,
@@ -22,18 +24,25 @@ function InputGroup({
 
   return (
     <div>
-      {label && (
-        <label
-          className={
-            hiddenLabel
-              ? "sr-only"
-              : "block text-sm font-medium leading-6 text-gray-900"
-          }
-          htmlFor={id}
-        >
-          {label}
-        </label>
-      )}
+      <div className="flex justify-between">
+        {label && (
+          <label
+            className={
+              hiddenLabel
+                ? "sr-only"
+                : "block text-sm font-medium leading-6 text-gray-900"
+            }
+            htmlFor={id}
+          >
+            {label}
+          </label>
+        )}
+        {cornerHint && (
+          <span className="text-sm leading-6 text-gray-500" id="email-optional">
+            {cornerHint}
+          </span>
+        )}
+      </div>
 
       <div
         className={twMerge("mt-2", error && "relative rounded-md shadow-sm")}
